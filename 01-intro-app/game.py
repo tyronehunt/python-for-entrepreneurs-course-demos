@@ -20,15 +20,21 @@ class Game:
         self.clear()
         for h in self.history:
             print(h[0], end='  ')
+            # flush output (as not using an inline print)
             sys.stdout.flush()
             time.sleep(1)
 
         self.clear()
 
     def add_move(self):
+        """
+
+        :rtype:
+        """
         self.history.append(random.choice(self.plays))
 
-    def test_player(self):
+    # noinspection PyMethodMayBeStatic
+    def test_player(self) -> object:
         print(colorama.Fore.WHITE + "{} moves:".format(len(self.history)))
         for t, v in self.history:
             guess = input("Next [r,g,b,y]: ")
