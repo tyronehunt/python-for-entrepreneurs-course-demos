@@ -1,0 +1,12 @@
+#!/Users/tyrone/programming/python_for_entrepreneurs/python-for-entrepreneurs-course-demos/04-applied-web/final_4_blue_yellow_app/.app_env_copy/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'Mako','console_scripts','mako-render'
+__requires__ = 'Mako'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('Mako', 'console_scripts', 'mako-render')()
+    )
